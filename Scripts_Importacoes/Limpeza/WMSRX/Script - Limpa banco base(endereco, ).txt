@@ -1,0 +1,55 @@
+--BEGIN TRAN DBCLEAN
+--ROLLBACK TRAN DBCLEAN
+--COMMIT TRAN DBCLEAN
+DELETE FROM arvore_estacao 
+GO
+
+DELETE FROM arvore_esteira 
+GO
+
+DELETE FROM caixa_esteira DBCC CHECKIDENT(caixa_esteira, RESEED, 1)
+GO
+
+DELETE FROM caixa_esteira_endereco DBCC CHECKIDENT(caixa_esteira_endereco, RESEED, 1)
+GO
+
+DELETE FROM endereco_corte DBCC CHECKIDENT(endereco_corte, RESEED, 1)
+GO
+
+DELETE FROM endereco_grupo DBCC CHECKIDENT(endereco_grupo, RESEED, 1)
+GO
+
+DELETE FROM endereco_log DBCC CHECKIDENT(endereco_log, RESEED, 1)
+GO
+
+DELETE FROM endereco_log_regra DBCC CHECKIDENT(endereco_log_regra, RESEED, 1)
+GO
+
+DELETE FROM endereco_log_regra_endereco DBCC CHECKIDENT(endereco_log_regra_endereco, RESEED, 1)
+GO 
+
+DELETE FROM endereco_log_resultado DBCC CHECKIDENT(endereco_log_resultado, RESEED, 1)
+GO
+
+
+DELETE FROM modulo_opcao_permissao 
+GO
+
+DELETE FROM endereco_restricao DBCC CHECKIDENT(endereco_restricao, RESEED, 1)
+GO
+
+DELETE FROM funcao DBCC CHECKIDENT(funcao, RESEED, 1)
+GO
+
+DELETE FROM inventario_suboperacao DBCC CHECKIDENT(inventario_suboperacao, RESEED, 1)
+GO
+
+DELETE FROM shelflife_log DBCC CHECKIDENT(shelflife_log, RESEED, 1)
+
+
+--DELETE endereco
+--WHERE nivel > 1 
+--DECLARE @max_endereco int
+--set @max_endereco = (select max(id_endereco) from endereco)
+--DBCC CHECKIDENT (endereco, RESEED, @max_endereco)
+
