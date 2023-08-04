@@ -1,0 +1,1 @@
+Repositorio Criado para centralizar os scripts dos clientes.
