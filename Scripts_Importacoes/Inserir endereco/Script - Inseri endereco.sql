@@ -1,0 +1,2 @@
+INSERT endereco (id_def,nivel,endereco,id_pai,qtd_caixa,endereco_completo,id_lote_classificacao,permite_inventario,id_tipo_volume,id_tipo_acesso_endereco,id_tipo_Armazenamento,endereco_completo_3D,id_endereco_completo,endereco_completo_pai,refugo,id_def_endereco_setor,GetEnderecoPaiNivel,cod_situacao_endereco,id_endereco_div,id_endereco_detalha_nivel)
+    VALUES (@id_def,1,'MOVIMENTACAO',NULL,NULL,'MOVIMENTACAO',1,-1,NULL,NULL,NULL,'MOVIMENTACAO',NULL,NULL,0,NULL,NULL,1,NULL,NULL)

@@ -1,0 +1,10 @@
+--INSERE OS ATRIBUTOS A PARTIR DA TABELA KANBAN 
+INSERT produto_atributo (cod_produto,cod_tipo_atributo,cod_opcao)
+SELECT distinct pr.cod_produto,
+--kb.cod_sku,
+daop.cod_tipo_atributo,
+kb.atrib_afrma as cod_opcao
+--daop.descricao
+FROM mig_kanban kb
+inner join produto_relacionado pr (nolock) on kb.cod_sku = pr.cod_produto_rel
+inner join def_atributo_opcao_produto daop on daop.cod_opcao = kb.atrib_afrma
